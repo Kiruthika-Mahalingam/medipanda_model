@@ -6,171 +6,112 @@
     <title>Medipanda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
-
-  <style>
-/* General Page Styling */
-/* Panda Theme - Advanced and Attractive */
-/* 🌌 Gradient Background */
-body {
-    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-/* 🐼 Panda Illustration with Glow */
-.panda-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.panda-container img {
-    width: 180px;
-    filter: drop-shadow(0px 0px 15px #ffffff90); /* Glow Effect */
-    border-radius: 50%;
-    animation: spin 8s infinite linear; /* Slow Rotating Effect */
-}
-
-/* 🔄 Spinner Effect */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* 💬 Chatbot Container with Gradient */
-.container {
-    width: 55%;
-    margin: auto;
-    padding: 25px;
-    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
-    border-radius: 20px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* ✨ Smooth Fade-in Effect */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-/* 🔥 Chatbot Title */
-h1 {
-    font-size: 30px;
-    font-weight: bold;
-    text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.3);
-    animation: glow 2s infinite alternate;
-}
-
-/* 🌟 Glowing Text Animation */
-@keyframes glow {
-    0% { text-shadow: 0px 0px 10px white; }
-    100% { text-shadow: 0px 0px 20px cyan; }
-}
-
-/* 💡 Chatbox Area */
-#chatbox {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
-    min-height: 200px;
-    backdrop-filter: blur(8px);
-    color: white;
-}
-
-/* 🔲 Input Box with Futuristic Effect */
-input[type="text"] {
-    width: 80%;
-    padding: 12px;
-    border: 2px solid #ffffff70;
-    border-radius: 10px;
-    font-size: 18px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    outline: none;
-    transition: 0.3s ease-in-out;
-}
-
-input[type="text"]:focus {
-    border: 2px solid cyan;
-    box-shadow: 0px 0px 10px cyan;
-}
-
-/* 🟦 Send Button with Neon Effect */
-button {
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-    color: white;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
-}
-
-button:hover {
-    background: linear-gradient(135deg, cyan, #3b82f6);
-    transform: scale(1.1);
-    box-shadow: 0px 0px 20px cyan;
-}
-
-/* 🌠 Floating Dots Animation */
-@keyframes float {
-    0% { transform: translateY(0px); opacity: 0.5; }
-    50% { transform: translateY(-15px); opacity: 1; }
-    100% { transform: translateY(0px); opacity: 0.5; }
-}
-
-.floating-dots {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    border-radius: 50%;
-    animation: float 3s infinite ease-in-out;
-}
-
-/* Placing Random Dots */
-.dot1 { left: 10%; top: 30%; animation-duration: 2s; }
-.dot2 { left: 50%; top: 10%; animation-duration: 3s; }
-.dot3 { left: 80%; top: 40%; animation-duration: 2.5s; }
-.dot4 { left: 30%; top: 60%; animation-duration: 2.2s; }
-.dot5 { left: 70%; top: 80%; animation-duration: 2.8s; }
-
-/* 🌟 Styled Toggle Buttons */
-.toggle-button {
-    padding: 10px;
-    margin: 5px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    width: 150px;
-    border-radius: 8px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .panda-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .panda-container img {
+            width: 150px;
+            filter: drop-shadow(0px 0px 10px #ffffff90); 
+            border-radius: 50%;
+            animation: spin 8s infinite linear; 
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.3);
+        }
+        #chatbox {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            min-height: 200px;
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            border: 2px solid #ffffff70;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border: 2px solid cyan;
+            box-shadow: 0px 0px 10px cyan;
+        }
+        button {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: linear-gradient(135deg, cyan, #3b82f6);
+            transform: scale(1.05);
+        }
+        .toggle-button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 14px;
+            width: 100%;
+            border-radius: 8px;
+            border: none;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .panda-container img {
+                width: 120px;
+            }
+            .container {
+                width: 95%;
+            }
+            h1 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-<!-- main form of page -->
-    <!-- Panda Illustration -->
     <div class="floating-dots dot1"></div>
     <div class="floating-dots dot2"></div>
     <div class="floating-dots dot3"></div>
     <div class="floating-dots dot4"></div>
     <div class="floating-dots dot5"></div>
     <div class="panda-container">
-        <img src="static/logo.jpg" alt="Cute Panda">
+        <iframe src="https://lottie.host/embed/50ae92f8-9c18-485a-8ef8-7308ec219d09/f3K5WiTv6A.lottie" 
+    width="300" 
+    height="300" 
+    style="border: none;">
+</iframe>
     </div>
 <h1 class="mt-4 my-4 text-center text-green">Medipanda Chatbot</h1>
 <div class="container my-4 mt-4">
@@ -178,41 +119,26 @@ button:hover {
         <div class="form-group">
             <label for="symptoms">Select Symptoms:</label>
             <input type="text" class="form-control", id="symptoms" name="symptoms" placeholder="type symptoms such as itching, sleeping, aching etc">
-
         </div>
         <br>
         <button type="button" id="startSpeechRecognition" class="btn btn-primary" style="margin-left:3px;border:1px solid white; border-radius:20px;">
             Start Speech Recognition
         </button>
         <br>
-
         <!-- Display the transcribed text here -->
         <div name="mysysms" id="transcription"></div>
-
         {% if message %}
         <p>{{ message }}</p>
         {% endif %}
         <br>
-
         <button type="submit" class="btn btn-danger btn-lg" style="width: 100%; padding: 14px; margin-bottom: 5px;">Enter</button>
     </form>
 </div>
-
-
-
-
-
-
-
-
 {% if predicted_disease %}
-
 <!-- Results -->
 <h1 class="text-center my-4 mt-4"></h1>
 <div class="container">
-
     <div class="result-container">
-        <!-- Buttons to toggle display -->
         <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#diseaseModal" >Disease</button>
         <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#descriptionModal">Description</button>
         <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#precautionModal" >Precaution</button>
@@ -221,59 +147,43 @@ button:hover {
         <button class="toggle-button" data-bs-toggle="modal" data-bs-target="#dietsModal">Diets</button>
     </div>
 </div>
-
 {% endif %}
-
 <!-- Disease Modal -->
 <div class="modal fade" id="diseaseModal" tabindex="-1" aria-labelledby="diseaseModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <!-- 🩺 Modal Header with Gradient & Neon Glow -->
             <div class="modal-header" style="background: linear-gradient(135deg, #020606, #0a1f1d); color: white; text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6); border-bottom: 2px solid #268AF3;">
                 <h5 class="modal-title" id="diseaseModalLabel" style="font-weight: bold; letter-spacing: 1px;">🩺 Predicted Disease</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(100%);"></button>
-            </div>
-            
-            <!-- 🖤 Modal Body with Stylish Background -->
+            </div> 
             <div class="modal-body" style="background: linear-gradient(135deg, #0d1c26, #112f4c); color: #E5E23D; font-size: 18px; font-weight: bold; padding: 15px; border-radius: 5px;">
                 <p style="text-align: center; text-shadow: 0px 0px 10px rgba(229, 226, 61, 0.7);">{{ predicted_disease }}</p>
             </div>
         </div>
     </div>
 </div>
-
-
    <!-- Description Modal -->
 <div class="modal fade" id="descriptionModal" tabindex="-1" aria-labelledby="descriptionModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <!-- 🌊 Modal Header with Gradient -->
             <div class="modal-header" style="background: linear-gradient(135deg, #020606, #0a1f1d); color: white; text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6); border-bottom: 2px solid #268AF3;">
                 <h5 class="modal-title" id="descriptionModalLabel" style="font-weight: bold; letter-spacing: 1px;">📜 Description</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(100%);"></button>
             </div>
-
-            <!-- 🌌 Modal Body with Gradient Background -->
             <div class="modal-body" style="background: linear-gradient(135deg, #0d1c26, #112f4c); color: #99F741; font-size: 18px; font-weight: bold; padding: 15px; border-radius: 5px;">
                 <p style="text-align: center; text-shadow: 0px 0px 10px rgba(153, 247, 65, 0.7);">{{ dis_des }}</p>
             </div>
         </div>
     </div>
 </div>
-
-
 <!-- Precaution Modal -->
 <div class="modal fade" id="precautionModal" tabindex="-1" aria-labelledby="precautionModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-        
-            <!-- 🛡️ Stylish Gradient Header -->
             <div class="modal-header" style="background: linear-gradient(135deg, #021a30, #0a3d62); color: #F371F9; text-shadow: 0px 0px 5px rgba(243, 113, 249, 0.7); border-bottom: 2px solid #99F741;">
                 <h5 class="modal-title" id="precautionModalLabel" style="font-weight: bold; letter-spacing: 1px;">🛡️ Precautions</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(100%);"></button>
             </div>
-
-            <!-- 🌟 Gradient Body with Styled List -->
             <div class="modal-body" style="background: linear-gradient(135deg, #102a42, #184a6b); color: white; font-size: 18px; font-weight: bold; padding: 15px; border-radius: 5px;">
                 <ul style="list-style: none; padding-left: 0;">
                     {% for i in my_precautions %}
@@ -287,23 +197,14 @@ button:hover {
         </div>
     </div>
 </div>
-
-
-
-
-
    <!-- Medications Modal -->
 <div class="modal fade" id="medicationsModal" tabindex="-1" aria-labelledby="medicationsModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-        
-            <!-- 💊 Gradient Header -->
             <div class="modal-header" style="background: linear-gradient(135deg, #021a30, #0a3d62); color: #F39334; text-shadow: 0px 0px 5px rgba(243, 147, 52, 0.7); border-bottom: 2px solid #268AF3;">
                 <h5 class="modal-title" id="medicationsModalLabel" style="font-weight: bold; letter-spacing: 1px;">💊 Medications</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(100%);"></button>
             </div>
-
-            <!-- 🌊 Gradient Body with Styled List -->
             <div class="modal-body" style="background: linear-gradient(135deg, #0d2d44, #186f8b); color: white; font-size: 18px; font-weight: bold; padding: 15px; border-radius: 5px;">
                 <ul style="list-style: none; padding-left: 0;">
                     {% for i in medications %}
@@ -313,7 +214,6 @@ button:hover {
                     {% endfor %}
                 </ul>
             </div>
-
         </div>
     </div>
 </div>
@@ -322,14 +222,10 @@ button:hover {
 <div class="modal fade" id="workoutsModal" tabindex="-1" aria-labelledby="workoutsModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-        
-            <!-- 🏋️‍♂️ Gradient Header -->
             <div class="modal-header" style="background: linear-gradient(135deg, #021a30, #0a3d62); color: #99F741; text-shadow: 0px 0px 5px rgba(153, 247, 65, 0.8); border-bottom: 2px solid #268AF3;">
                 <h5 class="modal-title" id="workoutsModalLabel" style="font-weight: bold; letter-spacing: 1px;">🏋️ Workouts</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(100%);"></button>
             </div>
-
-            <!-- 🌊 Smooth Gradient Body with Styled List -->
             <div class="modal-body" style="background: linear-gradient(135deg, #0d2d44, #186f8b); color: white; font-size: 18px; font-weight: bold; padding: 15px; border-radius: 5px;">
                 <ul style="list-style: none; padding-left: 0;">
                     {% for i in workout %}
@@ -339,24 +235,17 @@ button:hover {
                     {% endfor %}
                 </ul>
             </div>
-
         </div>
     </div>
 </div>
-
-
    <!-- Diets Modal -->
 <div class="modal fade" id="dietsModal" tabindex="-1" aria-labelledby="dietsModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-        
-            <!-- 🍏 Header with Green Theme -->
             <div class="modal-header" style="background: linear-gradient(135deg, #1b5e20, #43a047); color: #f0fdf4; text-shadow: 0px 0px 5px rgba(240, 253, 244, 0.8); border-bottom: 2px solid #81c784;">
                 <h5 class="modal-title" id="dietsModalLabel" style="font-weight: bold; letter-spacing: 1px;">🥗 Healthy Diets</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(100%);"></button>
             </div>
-
-            <!-- 🍃 Smooth Gradient Body -->
             <div class="modal-body" style="background: linear-gradient(135deg, #2e7d32, #66bb6a); color: white; font-size: 18px; font-weight: bold; padding: 15px; border-radius: 5px;">
                 <ul style="list-style: none; padding-left: 0;">
                     {% for i in my_diet %}
@@ -366,39 +255,26 @@ button:hover {
                     {% endfor %}
                 </ul>
             </div>
-
         </div>
     </div>
 </div>
-
-
-
-
         <script>
     const startSpeechRecognitionButton = document.getElementById('startSpeechRecognition');
     const transcriptionDiv = document.getElementById('transcription');
-
     startSpeechRecognitionButton.addEventListener('click', startSpeechRecognition);
-
     function startSpeechRecognition() {
-        const recognition = new webkitSpeechRecognition(); // Use webkitSpeechRecognition for compatibility
-
-        recognition.lang = 'en-US'; // Set the language for recognition
-
+        const recognition = new webkitSpeechRecognition();
+        recognition.lang = 'en-US'; 
         recognition.onresult = function (event) {
             const result = event.results[0][0].transcript;
             transcriptionDiv.textContent = result;
         };
-
         recognition.onend = function () {
             console.log('Speech recognition ended.');
         };
-
         recognition.start();
     }
 </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
-
 </html>
